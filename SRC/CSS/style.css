@@ -1,7 +1,11 @@
+/*Definições universais de fonte e tipo de rolagem*/
+
 html{
   scroll-behavior: smooth;
   font-family: 'Georgia', 'Times New Roman', serif;
 }
+
+/*Estilização da barra de navegação principal*/
 
 nav{
   position: fixed;
@@ -17,12 +21,45 @@ nav{
   color: #f7efe6;
 }
 
-nav a:link,nav a:visited {
+/*Estilização dos links da barra de navegação e dos demais links*/
+
+nav a:link,nav a:visited, aside a:link, aside a:visited, .Conteúdo a:link, .Conteúdo a:visited, .Complementos a:link, .Complementos a:visited {
   color: sienna;
   text-decoration:none;
   letter-spacing: 0.2rem;
   text-shadow: 1px 1px snow, 2px 2px saddlebrown;
 }
+
+/*Estilização da logotipo presente na barra de navegação*/
+
+.Título{
+  position: fixed;
+  top: -10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: sienna;
+}
+
+/*Barra de navegação secundária presente nos artigos*/
+
+aside{
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  background-color: #422606;
+  color: #f7efe6;
+}
+
+/*Estilização dos links presentes no corpo da página*/
 
 .Conteúdo a:link, .Conteúdo a:visited {
   color: sienna;
@@ -32,12 +69,16 @@ nav a:link,nav a:visited {
   text-shadow: 1px 1px snow, 2px 2px saddlebrown;
 }
 
+/*Estilização do fundo da página e do posicionamento dos itens*/
+
 body {
   background: linear-gradient( #f8efe4 0%, antiquewhite 45%, #dec5a8 100%);
   color: saddlebrown;
   place-items: center;
   padding:5rem 2rem 2rem 2rem;
 }
+
+/*Estilização do conteúdo principal, a seção central ao meio do body*/
 
 main {
   width: 100%;
@@ -46,13 +87,17 @@ main {
   box-shadow: 0 24px 60px saddlebrown;
 }
 
+/*Estilização da logotipo completa, a que está dentro do main*/
+
 header {
   padding: 4rem 3rem 4rem 3rem;
   text-align: center;
   background: linear-gradient(snow, whitesmoke);
 }
 
-header h1 {
+/*Estilização do título da logo*/
+
+header h1{
   font-size: 5rem;
   letter-spacing: 0.3em;
   line-height: 1.05;
@@ -60,6 +105,8 @@ header h1 {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   color: sienna;
 }
+
+/*Estilização do slogan da logo*/
 
 header p {
   font-size: 2rem;
@@ -70,28 +117,22 @@ header p {
   padding: 1rem 4rem 1rem 4rem;
 }
 
+/*Espaçamento entre a imaqem e o título */
+
 .Logotipo{
   display: flex;
   justify-content: center;
   gap: 5rem;
 }
 
+/*Logotipo*/
+
 #imagem1{
   width: 150px;
   height: 150px;
 }
 
-#imagem2{  
-  width: 200px;
-  height: 300px;
-  margin-right: 100px;
-}
-
-#imagem3{
-  width: 200px;
-  height: 300px;
-  margin-left: 100px;
-} 
+/*Fundo e posicionamento interno das divs que comportam imagens*/
 
 figure{
   display: flex;
@@ -102,6 +143,8 @@ figure{
   border-radius:1rem;
 }
 
+/*Bordas e transições de largura das imagens*/
+
 figure img{
   border-radius:1rem;
   border:2px solid antiquewhite;
@@ -110,9 +153,13 @@ figure img{
   transition: width 2s;
 }
 
+/*Transição passando o mouse*/
+
 figure img:hover{
    width: 500px;
 }
+
+/*Legenda das imagens*/
 
 #Legenda{
   display: flex;
@@ -121,28 +168,32 @@ figure img:hover{
   text-decoration: underline;
 }
 
-.Objetivos {
+/*Seção que comporta os articles, que subdividem a página*/
+
+section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding: 2rem 1.5rem 3rem 1.5rem;
 }
 
-.Conteúdo {
+/*Estilização dos quadrados que possuem o conteúdo do site*/
+
+article {
   background: antiquewhite;
   border-radius: 1.5rem;
   padding: 4rem;
   box-shadow: 0 16px 32px lightgray;
 }
 
-.Conteúdo h2 {
+article h2 {
   margin-bottom: 0.75rem;
   color: sienna;
   font-size: 2.5rem;
   letter-spacing: 0.08em;
 }
 
-.Conteúdo p {
+article p {
   color: saddlebrown;
   line-height: 1.8;
   font-size: 1.5rem;
@@ -155,6 +206,8 @@ figure img:hover{
   background: linear-gradient(to right, sienna, saddlebrown);
   border-radius: 1000px;
 }
+
+/*Estilização das listas com tópicos*/
 
 #Lista{
   display: flex;
@@ -171,12 +224,16 @@ figure img:hover{
   margin: 2rem;
 }
 
+/*Seção final do site, com contatos*/
+
 footer{
   place-items: center;
   flex-wrap: wrap;
   font-size: 2rem;
   padding-bottom: 2rem;
 }
+
+/*Links e conteúdos adicionais no final*/
 
 .Complementos{
   display: flex;
@@ -186,37 +243,32 @@ footer{
   padding: 2rem;
 }
 
+/*Article mais chamativo*/
+
 .Artigos{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background: antiquewhite;
+  border:0.5rem solid sienna;
   border-radius: 1.5rem;
   padding: 4rem;
   box-shadow: 0 32px 64px saddlebrown;
   font-size: 2rem;
 }
 
-a{
+/*Links do final da página*/
+
+.Artigos a{
   color: sienna;
-  text-decoration:none;
+  text-decoration:underline;
   letter-spacing: 0.2rem;
   text-shadow: 1px 1px snow, 2px 2px saddlebrown;
 }
 
-aside{
-  position: fixed;
-  top: 64px;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  background-color: #422606;
-  color: #f7efe6;
-}
+
+/*Estilização do conteúdo interno do footer*/
 
 .Contatos{
   display: flex;
